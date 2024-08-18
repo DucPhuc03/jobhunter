@@ -30,7 +30,7 @@ public class UserController {
     @GetMapping("/")
     public ResponseEntity<RestResponse<String>> home(){
         RestResponse<String> res=new RestResponse<String>();
-        res.setData("hello");
+        res.setData("hello0000");
         return ResponseEntity.status(HttpStatus.OK).body(res);
     }
     @PostMapping("/users")
