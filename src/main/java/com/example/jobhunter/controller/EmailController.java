@@ -16,7 +16,9 @@ public class EmailController {
     EmailService emailService;
     @GetMapping("/email")
     public ResponseEntity<RestResponse<String>> sendEmail() {
-        emailService.sendEmail();
+//        emailService.sendEmail();
+//        emailService.sendEmailSync("nguyenpguc2003@gmail.com","test","hello",false,false);
+        emailService.sendEmailFromTemplateSync("nguyenpguc2003@gmail.com","test","job");
         RestResponse<String> res = new RestResponse<String>();
         res.setData("hello");
         return ResponseEntity.status(HttpStatus.OK).body(res);
